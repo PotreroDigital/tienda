@@ -15,19 +15,18 @@ $imagen= $reg['imagen'];
    <body>
      <h2>Modificar productos</h2>
      <p>ingrese los nuevos datos del producto</p>
-     <form class="" action="" method="post">
+     <form class=""  method="post">
        <input type="text" name="nombre" placeholder="Nombre" value="<?php echo "$nombre"; ?>">
        <input type="text" name="precio" placeholder="Precio" value="<?php echo "$precio"; ?>">
        <input type="text" name="descripcion" placeholder="Descripcion"value="<?php echo "$descripcion"; ?>">
        <input type="text" name="imagen" placeholder="Imagen" value="<?php echo "$imagen"; ?>">
-       <input type="submit" name="guardar" value="guardar cambios">
+       <input type="submit" name="guardar" value="guardar_cambios">
        <button type="submit" name="cancelar" formaction="buscar_nombre.html">cancelar</button>
-
      </form>
-     <?php
-     if (array_key_exists ('guardar', $_POST)) {
-       guardar_cambios();
-     }
-      ?>
-   </body>
- </html>
+       <?php
+       if (array_key_exists ('guardar', $_POST)) {
+         guardar_cambios();
+       }
+       ?>
+    </body>
+  </html>

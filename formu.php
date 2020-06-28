@@ -7,7 +7,6 @@
   <body>
 		<div class="login">
 			<h1>ingresar</h1>
-		    <form method="post">
 					  <form class="" action="logueo.php" method="post">
 		      	<link rel="stylesheet" href="for.css">
 		    		<input type="text" name="usuario" placeholder="usuario">

@@ -20,7 +20,8 @@
       <input type="text" name="imagen" size="100"/>
       <br></br>
       <input type="submit" name="submit" value="enviar">
-
+      <button type="submit" name="eliminar" formaction="formubaja.php">eliminar</button>
+      <button type="submit" name="modificar" formaction="buscar_nombre.html">Modificar</button>
     </form>
 
   </body>

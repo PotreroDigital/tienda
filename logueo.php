@@ -9,7 +9,7 @@ $contraseña = $_POST ["contraseña"];
 if ($usuario === $usuario1_correcto && $contraseña=== $palabra1_secreta_correcta) {
   session_start ();
   $_SESSION ["usuario"] = $usuario;
-  header ("location: secreta.php");
+  header ("location: formualt.php");
 }
 else {
   echo "el usuario o la contraseña es incorrecto";
