@@ -11,6 +11,7 @@
       <input type="text" name="nombre" size="50">
       <br></br>
       <input type="submit" name="submit" value="enviar">
+      <button type="submit" name="cancelar" formaction="formualt.php">cancelar</button>
 
     </form>
 

@@ -42,6 +42,14 @@ if(isset($_POST['btnAccion'])){
                     $_SESSION['CARRITO'][0]=$producto;
 
             }else{
+
+                $idProductos=array_column($_SESSION['CARRITO'],"ID");
+                if (in_array($ID,$idProductos)){
+                    echo "<script>alert('El producto ya ha sido seleccionado ');</script>";
+                } else{ 
+
+
+
                 $NumeroProductos=count($_SESSION['CARRITO']);
 
                 $producto=array(
@@ -52,7 +60,8 @@ if(isset($_POST['btnAccion'])){
                     );
                     $_SESSION['CARRITO'][$NumeroProductos]=$producto;
                     
-            }
+                }
+            }    
             
            // $mensaje= print_r($_SESSION,true);
             $mensaje= "Producto agregado al carrito...";

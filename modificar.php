@@ -31,7 +31,7 @@ function guardar_cambios(){
      $consulta= "UPDATE tblproductos SET nombre='$nombre', precio='$precio', descripcion='$descripcion', imagen= '$imagen' WHERE nombre='$nombre' ";
 
      mysqli_query($conexion, $consulta);
-     header('location: buscar_nombre.html');
+     header('location: formualt.php');
      return;
 } else {
     echo "ERROR!";

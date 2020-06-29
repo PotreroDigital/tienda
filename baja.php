@@ -19,5 +19,5 @@
 ?>
 
 <form class="" action="" method="post">
-  <button type="submit" name="button" formaction="buscar_nombre.html">Volver</button>
+  <button type="submit" name="button" formaction="formualt.php">Volver</button>
 </form>

@@ -21,7 +21,7 @@ $imagen= $reg['imagen'];
        <input type="text" name="descripcion" placeholder="Descripcion"value="<?php echo "$descripcion"; ?>">
        <input type="text" name="imagen" placeholder="Imagen" value="<?php echo "$imagen"; ?>">
        <input type="submit" name="guardar" value="guardar_cambios">
-       <button type="submit" name="cancelar" formaction="buscar_nombre.html">cancelar</button>
+       <button type="submit" name="cancelar" formaction="formualt.php">cancelar</button>
      </form>
        <?php
        if (array_key_exists ('guardar', $_POST)) {
