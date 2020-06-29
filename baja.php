@@ -1,17 +1,23 @@
 <?php
-if ($conexion = mysqli_connect ("127.0.0.1", "root")) {
-  echo "<p>MySQL le ha dado permiso a PHP para ejecutar consultas con ese usuario</p>";
+  // 1) Conexion
+  if ($conexion = mysqli_connect("127.0.0.1", "root", "")){
+    mysqli_select_db($conexion, "tienda");
 
-  $nombre = $_POST ['nombre'];
+    // 2) Almacenamos los datos del envío POST
+    $nombre = $_POST['nombre'];
 
+    // 3) Preparar la orden SQL
+    $consulta = "DELETE FROM tblproductos WHERE nombre='$nombre'";
 
-  $consulta= "DELETE * FROM tblproductos WHERE nombre=$nombre";
-
-  mysqli_select_db($conexion, "tienda");
-  if (mysqli_query ($conexion, $consulta)) {
-    echo "<p> Registro eliminado. </p>";
+    // 4) Ejecutar la orden y ingresamos datos
+    if (mysqli_query($conexion, $consulta) ){
+      echo "<p>Registro eliminado.</p>";
+    }
   } else {
-    echo "<p> MySQL no lo reconoce.</p>";
+    echo "<p> MySQL no conoce ese usuario y password</p>";
   }
-}
- ?>
+?>
+
+<form class="" action="" method="post">
+  <button type="submit" name="button" formaction="buscar_nombre.html">Volver</button>
+</form>

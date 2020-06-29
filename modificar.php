@@ -6,11 +6,11 @@ function buscar_nombre(){
 
     $nombre = $_POST ['nombre'];
 
-    if ($q="SELECT*FROM tblproductos WHERE nombre= $nombre") {
+    if ($q= "SELECT*FROM tblproductos WHERE nombre= '$nombre'") {
       $reg= mysqli_query($conexion, $q);
-      $nombre_reg= mysqli_fetch_array($reg);
-      if ($nombre_reg['nombre'] == $nombre) {
-
+      $nombre_reg= mysqli_fetch_array ($reg);
+      if ($nombre_reg ['nombre'] == $nombre) {
+        return $nombre_reg;
       }
     } else {
       echo "<p> MySQL no conoce el producto</p>";
@@ -20,7 +20,7 @@ function buscar_nombre(){
   }
 }
 function guardar_cambios(){
-  if ($conecxion= mysqli_connect ("127.0.0.1", "root", "")) {
+  if ($conexion= mysqli_connect ("127.0.0.1", "root", "")) {
     mysqli_select_db($conexion, "tienda");
 
     $nombre=$_POST['nombre'];
@@ -28,13 +28,13 @@ function guardar_cambios(){
     $descripcion=$_POST['descripcion'];
     $imagen=$_POST['imagen'];
 
-     $consulta= "UPDATE tblproductos SET nombre='$nombre', precio='$precio', descripcion='$descripcion', imagen= '$imagen' WHERE nombre=$nombre ";
+     $consulta= "UPDATE tblproductos SET nombre='$nombre', precio='$precio', descripcion='$descripcion', imagen= '$imagen' WHERE nombre='$nombre' ";
 
-     mysqli_query($ocnexion, $consulta);
+     mysqli_query($conexion, $consulta);
      header('location: buscar_nombre.html');
      return;
-   } else {
+} else {
     echo "ERROR!";
-    }
+}
 }
 ?>
